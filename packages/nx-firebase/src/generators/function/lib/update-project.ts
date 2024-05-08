@@ -30,6 +30,7 @@ export function updateProject(host: Tree, options: NormalizedSchema): void {
       target: 'node16',
       format: [options.format || 'esm'], // default for esbuild is esm
       esbuildOptions: {
+        sourcemap: true,
         logLevel: 'info',
       },
     },

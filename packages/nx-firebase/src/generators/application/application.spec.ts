@@ -78,7 +78,7 @@ describe('application generator', () => {
           options: {
             commands: [
               `nx run my-firebase-app:killports`,
-              `nx run my-firebase-app:firebase emulators:start --import=apps/my-firebase-app/.emulators --export-on-exit`,
+              `nx run my-firebase-app:firebase emulators:start --import=apps/my-firebase-app/.emulators --export-on-exit --inspect-functions`,
             ],
             parallel: false,
           },

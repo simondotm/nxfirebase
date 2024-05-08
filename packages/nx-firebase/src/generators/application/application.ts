@@ -171,7 +171,7 @@ export async function applicationGenerator(
         options: {
           commands: [
             `nx run ${options.projectName}:killports`,
-            `nx run ${options.projectName}:firebase emulators:start --import=${options.projectRoot}/.emulators --export-on-exit`,
+            `nx run ${options.projectName}:firebase emulators:start --import=${options.projectRoot}/.emulators --export-on-exit --inspect-functions`,
           ],
           parallel: false,
         },

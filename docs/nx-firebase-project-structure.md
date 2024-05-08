@@ -82,7 +82,7 @@ We tag all dependent projects so that we can use Nx `run-many` with tag specifie
       "options": {
         "commands": [
           "nx run your-firebase-app-project-name:killports",
-          "nx run your-firebase-app-project-name:firebase emulators:start --import=apps/your-firebase-app-project-name/.emulators --export-on-exit"
+          "nx run your-firebase-app-project-name:firebase emulators:start --import=apps/your-firebase-app-project-name/.emulators --export-on-exit --inspect-functions"
         ],
         "parallel": false
       }
@@ -145,6 +145,7 @@ Functions use `esbuild` to compile & bundle the code.
         "target": "node16",
         "format": ["esm"],
         "esbuildOptions": {
+          "sourcemap": true,
           "logLevel": "info"
         }
       }
